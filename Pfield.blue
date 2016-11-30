@@ -1,0 +1,968 @@
+<blueData version='2.6.1'>
+  <projectProperties>
+    <title></title>
+    <author></author>
+    <notes></notes>
+    <sampleRate>48000</sampleRate>
+    <ksmps>32</ksmps>
+    <channels>2</channels>
+    <useZeroDbFS>true</useZeroDbFS>
+    <zeroDbFS>1</zeroDbFS>
+    <diskSampleRate>48000</diskSampleRate>
+    <diskKsmps>256</diskKsmps>
+    <diskChannels>2</diskChannels>
+    <diskUseZeroDbFS>true</diskUseZeroDbFS>
+    <diskZeroDbFS>1</diskZeroDbFS>
+    <useAudioOut>true</useAudioOut>
+    <useAudioIn>false</useAudioIn>
+    <useMidiIn>false</useMidiIn>
+    <useMidiOut>false</useMidiOut>
+    <noteAmpsEnabled>true</noteAmpsEnabled>
+    <outOfRangeEnabled>true</outOfRangeEnabled>
+    <warningsEnabled>true</warningsEnabled>
+    <benchmarkEnabled>true</benchmarkEnabled>
+    <advancedSettings>-j1</advancedSettings>
+    <completeOverride>false</completeOverride>
+    <fileName></fileName>
+    <askOnRender>false</askOnRender>
+    <diskNoteAmpsEnabled>true</diskNoteAmpsEnabled>
+    <diskOutOfRangeEnabled>true</diskOutOfRangeEnabled>
+    <diskWarningsEnabled>true</diskWarningsEnabled>
+    <diskBenchmarkEnabled>true</diskBenchmarkEnabled>
+    <diskAdvancedSettings>-j4</diskAdvancedSettings>
+    <diskCompleteOverride>false</diskCompleteOverride>
+    <diskAlwaysRenderEntireProject>false</diskAlwaysRenderEntireProject>
+  </projectProperties>
+  <arrangement>
+    <instrumentAssignment arrangementId='1' isEnabled='true'>
+      <instrument type='blue.orchestra.BlueSynthBuilder' editEnabled='true'>
+        <name>DistortionGuitar v2.3</name>
+        <comment>Original Author of DistortionGuitar version 1: Atte André Jensen (atte.dk), 2007
+Author of DistortionGuitar version 2: Menno Knevel, 2016
+
+Originally: Distorted guitar with flanger, but now extended with some features
+
+version 2.3, november 2016
+- lin --&gt; exp faders for better mixing of fry and wet signals in the 3 resonance modes
+- option to set in score: -1. When in score p4 or p5 = -1, then Automation Line makes the value for p4 or p5 (experimental)
+
+version 2.2, november 2016
+- all checbox code now checks out
+- improved delay start of vibrato
+
+version 2.1, november 2016
+- added vibrato
+- added Zwel for every one of the 3 voices
+- improved mixing of the 3 resonace filters
+- option to change pitch while the note plays
+
+version 2, november 2016
+
+- detune is variable now
+- now 0 dbfs = 1 (was = 32000)
+- filter attack and decay variable now
+- UDO with pluck has setksmps 1, so is independent of the ksmps of the csd
+- improved parameter value handling for stretching of pluck (method 4)
+EFFECT SECTION:
+- added 3 resonance filters for shaping of the body of the guitar
+- turn distortion on/off
+- turn Amplitude MOdulation on/off. 
+
+several presets are present.</comment>
+        <globalOrc/>
+        <globalSco/>
+        <instrumentText>;============frequency input P4====================
+
+ifreq k_Pfield  4, i(&lt;frequency_ALP&gt;)                                           ; p4 = frequency
+ifreq	=	(ifreq &gt;= 20) ? ifreq : cpspch(ifreq)                           ; pitch or frequency input
+
+;===============volume input P5=====================
+
+ivol k_Pfield   5, i(&lt;amplitude_ALP&gt;)                                           ; p5 = volume setting
+kvol	=	ivol * &lt;volume&gt;                                                 ; * variable volume
+
+;====================================================
+asig    poscil  kvol, ifreq
+
+	outs asig * kvol, asig * kvol                                             ; output
+</instrumentText>
+        <alwaysOnInstrumentText></alwaysOnInstrumentText>
+        <graphicInterface editEnabled='false'>
+          <gridSettings>
+            <width>5</width>
+            <height>15</height>
+            <gridStyle>DOT</gridStyle>
+            <snapGridEnabled>true</snapGridEnabled>
+          </gridSettings>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>645</x>
+            <y>405</y>
+            <label>Volume</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>23</x>
+            <y>13</y>
+            <label>&lt;html&gt;&lt;font size=&quot;8&quot;&gt;&lt;b&gt;DistortionGuitar&lt;/b&gt;&lt;/font&gt;&lt;/html&gt;</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>355</x>
+            <y>15</y>
+            <label>v 2.3</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>340</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>430</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>385</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>475</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>565</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>520</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>580</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>630</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>720</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>675</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>765</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>855</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>810</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>870</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>925</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>1015</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>970</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>1060</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>1150</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>1105</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>1165</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>1220</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>1310</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>1265</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>1350</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>105</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>195</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>150</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>240</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>285</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>45</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>135</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>90</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>180</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>225</x>
+            <y>705</y>
+            <label>_________</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBHSlider'>
+            <objectName>frequency_ALP</objectName>
+            <x>50</x>
+            <y>750</y>
+            <automationAllowed>true</automationAllowed>
+            <minimum>4.0</minimum>
+            <maximum>1000.0</maximum>
+            <resolution>0.1</resolution>
+            <value>944.7</value>
+            <sliderWidth>1300</sliderWidth>
+            <randomizable>true</randomizable>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBHSlider'>
+            <objectName>amplitude_ALP</objectName>
+            <x>50</x>
+            <y>780</y>
+            <automationAllowed>true</automationAllowed>
+            <minimum>0.0</minimum>
+            <maximum>1.0</maximum>
+            <resolution>0.1</resolution>
+            <value>0.7</value>
+            <sliderWidth>1300</sliderWidth>
+            <randomizable>true</randomizable>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>40</x>
+            <y>750</y>
+            <label>P4</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>40</x>
+            <y>780</y>
+            <label>P5</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBLabel'>
+            <objectName></objectName>
+            <x>55</x>
+            <y>720</y>
+            <label>&lt;html&gt;&lt;font size=&quot;+2&quot;&gt;replace Pfields when -1 in score&lt;/font&gt;&lt;/html&gt;</label>
+          </bsbObject>
+          <bsbObject type='blue.orchestra.blueSynthBuilder.BSBKnob' version='2'>
+            <objectName>volume</objectName>
+            <x>640</x>
+            <y>315</y>
+            <automationAllowed>true</automationAllowed>
+            <minimum>0.0</minimum>
+            <maximum>1.0</maximum>
+            <value>0.48998</value>
+            <knobWidth>60</knobWidth>
+            <randomizable>true</randomizable>
+          </bsbObject>
+        </graphicInterface>
+        <bsbParameterList>
+          <parameter uniqueId='-1961873859' name='amplitude_ALP' label='' min='0.0' max='1.0' resolution='0.1' automationEnabled='true' value='0.7'>
+            <line name='' version='2' max='1.0' min='0.0' resolution='0.1' color='-14623488' rightBound='false' endPointsLinked='false'>
+              <linePoint x='0.0' y='0.7'/>
+              <linePoint x='0.5' y='0.6'/>
+              <linePoint x='1.5' y='0.8'/>
+              <linePoint x='3.5227273' y='0.8'/>
+              <linePoint x='4.5' y='0.3'/>
+              <linePoint x='6.5' y='0.90000004'/>
+            </line>
+          </parameter>
+          <parameter uniqueId='-1961873861' name='frequency_ALP' label='' min='4.0' max='1000.0' resolution='0.1' automationEnabled='true' value='944.7'>
+            <line name='' version='2' max='1000.0' min='4.0' resolution='0.1' color='-16776961' rightBound='false' endPointsLinked='false'>
+              <linePoint x='0.0' y='944.7'/>
+              <linePoint x='0.0' y='232.3'/>
+              <linePoint x='0.0' y='280.7'/>
+              <linePoint x='0.5' y='287.6'/>
+            </line>
+          </parameter>
+          <parameter uniqueId='-1253707703' name='volume' label='' min='0.0' max='1.0' resolution='-1.0' automationEnabled='true' value='0.48998'>
+            <line name='' version='2' max='1.0' min='0.0' resolution='-1.0' color='-23296' rightBound='false' endPointsLinked='false'>
+              <linePoint x='0.0' y='0.48998'/>
+              <linePoint x='2.7954545' y='0.4861111'/>
+              <linePoint x='3.5' y='0.24305558'/>
+              <linePoint x='6.159091' y='0.2361111'/>
+              <linePoint x='7.0' y='0.7847222'/>
+              <linePoint x='12.0' y='0.0'/>
+            </line>
+          </parameter>
+        </bsbParameterList>
+        <presetGroup name='Presets' currentPresetUniqueId='1575249545' currentPresetModified='false'>
+          <preset name='aerie' uniqueId='2088202113'>
+            <setting name='AM_depth'>ver2:1</setting>
+            <setting name='AM_freq'>ver2:80.8990020752</setting>
+            <setting name='AM_on'>false</setting>
+            <setting name='DIST_on'>false</setting>
+            <setting name='MODE_on'>true</setting>
+            <setting name='OnSwell1'>true</setting>
+            <setting name='OnSwell2'>false</setting>
+            <setting name='OnSwell3'>true</setting>
+            <setting name='SwellPosition1'>0.55</setting>
+            <setting name='SwellPosition2'>0.70000005</setting>
+            <setting name='SwellPosition3'>0.3</setting>
+            <setting name='Vibrato'>true</setting>
+            <setting name='amp1'>1.0</setting>
+            <setting name='amp2'>1.0</setting>
+            <setting name='amp3'>1.0</setting>
+            <setting name='buffer_size'>1.88001</setting>
+            <setting name='cutoff'>ver2:46.0540008545</setting>
+            <setting name='detune'>0.66400003</setting>
+            <setting name='distortion'>ver2:0.7425500154</setting>
+            <setting name='fil_attack'>ver2:1.0806200504</setting>
+            <setting name='fil_decay'>ver2:6.3646202087</setting>
+            <setting name='flange'>ver2:0</setting>
+            <setting name='inverse1_on'>false</setting>
+            <setting name='inverse2_on'>false</setting>
+            <setting name='inverse3_on'>false</setting>
+            <setting name='jitspd'>ver2:6.8000001907</setting>
+            <setting name='jitterdepth'>ver2:4.2999801636</setting>
+            <setting name='method'>id:1393165289</setting>
+            <setting name='mixmod1'>0.9990001</setting>
+            <setting name='mixmod2'>0.9990001</setting>
+            <setting name='mixmod3'>0.9990001</setting>
+            <setting name='modQ1'>ver2:20.9340000153</setting>
+            <setting name='modQ2'>ver2:35.9197006226</setting>
+            <setting name='modQ3'>ver2:30.9379005432</setting>
+            <setting name='modfreq1'>ver2:79.1735992432</setting>
+            <setting name='modfreq2'>ver2:950.3070068359</setting>
+            <setting name='modfreq3'>ver2:1544.2600097656</setting>
+            <setting name='par1'>ver2:0.2800000012</setting>
+            <setting name='par2'>ver2:0.7399700284</setting>
+            <setting name='pitchchange'>1.0</setting>
+            <setting name='swellamp1'>3.3000002</setting>
+            <setting name='swellamp2'>-0.8</setting>
+            <setting name='swellamp3'>2.9</setting>
+            <setting name='vibdelay'>ver2:1.9129600525</setting>
+            <setting name='vibdpth'>ver2:12.7995004654</setting>
+            <setting name='vibspd'>ver2:6.8448300362</setting>
+            <setting name='vibtypeLFO'>3.0</setting>
+            <setting name='volume'>ver2:0.5099800229</setting>
+          </preset>
+          <preset name='chinese guitar' uniqueId='1575249545'>
+            <setting name='AM_depth'>ver2:1</setting>
+            <setting name='AM_freq'>ver2:80.8990020752</setting>
+            <setting name='AM_on'>false</setting>
+            <setting name='DIST_on'>false</setting>
+            <setting name='MODE_on'>true</setting>
+            <setting name='amp1'>1.0</setting>
+            <setting name='amp2'>1.0</setting>
+            <setting name='amp3'>1.0</setting>
+            <setting name='buffer_size'>0.23000999</setting>
+            <setting name='cutoff'>ver2:100</setting>
+            <setting name='detune'>0.012</setting>
+            <setting name='distortion'>ver2:0.0693600029</setting>
+            <setting name='fil_attack'>ver2:0.001</setting>
+            <setting name='fil_decay'>ver2:6.3646202087</setting>
+            <setting name='flange'>ver2:0</setting>
+            <setting name='inverse1_on'>true</setting>
+            <setting name='inverse2_on'>false</setting>
+            <setting name='inverse3_on'>false</setting>
+            <setting name='method'>id:1393165290</setting>
+            <setting name='mixmod1'>0.11800001</setting>
+            <setting name='mixmod2'>0.125</setting>
+            <setting name='mixmod3'>0.125</setting>
+            <setting name='modQ1'>ver2:20.9368000031</setting>
+            <setting name='modQ2'>ver2:15.9600000381</setting>
+            <setting name='modQ3'>ver2:40.918800354</setting>
+            <setting name='modfreq1'>ver2:277.1740112305</setting>
+            <setting name='modfreq2'>ver2:475.108001709</setting>
+            <setting name='modfreq3'>ver2:1544.2600097656</setting>
+            <setting name='par1'>ver2:0.6100000143</setting>
+            <setting name='par2'>ver2:0.6999800205</setting>
+            <setting name='volume'>ver2:0.8299999833</setting>
+          </preset>
+          <preset name='electric guitar' uniqueId='1575249546'>
+            <setting name='AM_depth'>ver2:1</setting>
+            <setting name='AM_freq'>ver2:80.8990020752</setting>
+            <setting name='AM_on'>false</setting>
+            <setting name='DIST_on'>true</setting>
+            <setting name='MODE_on'>false</setting>
+            <setting name='amp1'>1.0</setting>
+            <setting name='amp2'>1.0</setting>
+            <setting name='amp3'>1.0</setting>
+            <setting name='buffer_size'>0.23000999</setting>
+            <setting name='cutoff'>ver2:100</setting>
+            <setting name='detune'>0.012</setting>
+            <setting name='distortion'>ver2:0.7425500154</setting>
+            <setting name='fil_attack'>ver2:0.001</setting>
+            <setting name='fil_decay'>ver2:6.3646202087</setting>
+            <setting name='flange'>ver2:0</setting>
+            <setting name='inverse1_on'>true</setting>
+            <setting name='inverse2_on'>false</setting>
+            <setting name='inverse3_on'>false</setting>
+            <setting name='method'>id:1393165289</setting>
+            <setting name='mixmod1'>0.11800001</setting>
+            <setting name='mixmod2'>0.125</setting>
+            <setting name='mixmod3'>0.125</setting>
+            <setting name='modQ1'>ver2:20.9368000031</setting>
+            <setting name='modQ2'>ver2:15.9600000381</setting>
+            <setting name='modQ3'>ver2:40.918800354</setting>
+            <setting name='modfreq1'>ver2:277.1740112305</setting>
+            <setting name='modfreq2'>ver2:475.108001709</setting>
+            <setting name='modfreq3'>ver2:1544.2600097656</setting>
+            <setting name='par1'>ver2:0.6100000143</setting>
+            <setting name='par2'>ver2:0.6999800205</setting>
+            <setting name='volume'>ver2:0.8299999833</setting>
+          </preset>
+          <preset name='horns' uniqueId='1575249544'>
+            <setting name='AM_depth'>ver2:1</setting>
+            <setting name='AM_freq'>ver2:80.8990020752</setting>
+            <setting name='AM_on'>false</setting>
+            <setting name='DIST_on'>false</setting>
+            <setting name='MODE_on'>true</setting>
+            <setting name='amp1'>1.0</setting>
+            <setting name='amp2'>1.0</setting>
+            <setting name='amp3'>1.0</setting>
+            <setting name='buffer_size'>1.29001</setting>
+            <setting name='cutoff'>ver2:100</setting>
+            <setting name='detune'>0.0050000004</setting>
+            <setting name='distortion'>ver2:0.0693600029</setting>
+            <setting name='fil_attack'>ver2:0.2709099948</setting>
+            <setting name='fil_decay'>ver2:6.3646202087</setting>
+            <setting name='flange'>ver2:0</setting>
+            <setting name='inverse1_on'>false</setting>
+            <setting name='inverse2_on'>false</setting>
+            <setting name='inverse3_on'>true</setting>
+            <setting name='method'>id:1393165285</setting>
+            <setting name='mixmod1'>0.11800001</setting>
+            <setting name='mixmod2'>0.125</setting>
+            <setting name='mixmod3'>0.125</setting>
+            <setting name='modQ1'>ver2:20.9368000031</setting>
+            <setting name='modQ2'>ver2:190.6100006104</setting>
+            <setting name='modQ3'>ver2:5.9889302254</setting>
+            <setting name='modfreq1'>ver2:673.1770019531</setting>
+            <setting name='modfreq2'>ver2:178.108001709</setting>
+            <setting name='modfreq3'>ver2:1544.2600097656</setting>
+            <setting name='par1'>ver2:0.6100000143</setting>
+            <setting name='par2'>ver2:0.6999800205</setting>
+            <setting name='volume'>ver2:0.8299999833</setting>
+          </preset>
+          <preset name='horny cat' uniqueId='1646379441'>
+            <setting name='AM_depth'>ver2:1</setting>
+            <setting name='AM_freq'>ver2:150.8280029297</setting>
+            <setting name='AM_on'>false</setting>
+            <setting name='DIST_on'>false</setting>
+            <setting name='MODE_on'>true</setting>
+            <setting name='OnSwell1'>true</setting>
+            <setting name='OnSwell2'>false</setting>
+            <setting name='OnSwell3'>false</setting>
+            <setting name='SwellPosition1'>0.55</setting>
+            <setting name='SwellPosition2'>0.70000005</setting>
+            <setting name='SwellPosition3'>0.3</setting>
+            <setting name='Vibrato'>true</setting>
+            <setting name='amp1'>1.0</setting>
+            <setting name='amp2'>1.0</setting>
+            <setting name='amp3'>1.0</setting>
+            <setting name='buffer_size'>1.09001</setting>
+            <setting name='cutoff'>ver2:56.0438041687</setting>
+            <setting name='detune'>0.45800003</setting>
+            <setting name='distortion'>ver2:0.7029500008</setting>
+            <setting name='fil_attack'>ver2:0.3308700025</setting>
+            <setting name='fil_decay'>ver2:2.4079101086</setting>
+            <setting name='flange'>ver2:0.0399900004</setting>
+            <setting name='inverse1_on'>false</setting>
+            <setting name='inverse2_on'>true</setting>
+            <setting name='inverse3_on'>true</setting>
+            <setting name='jitspd'>ver2:17.5104007721</setting>
+            <setting name='jitterdepth'>ver2:5</setting>
+            <setting name='method'>id:1393165285</setting>
+            <setting name='mixmod1'>0.0</setting>
+            <setting name='mixmod2'>0.0</setting>
+            <setting name='mixmod3'>0.9990001</setting>
+            <setting name='modQ1'>ver2:20.9368000031</setting>
+            <setting name='modQ2'>ver2:440.1090087891</setting>
+            <setting name='modQ3'>ver2:5.9889302254</setting>
+            <setting name='modfreq1'>ver2:257.3590087891</setting>
+            <setting name='modfreq2'>ver2:534.507019043</setting>
+            <setting name='modfreq3'>ver2:1544.2600097656</setting>
+            <setting name='par1'>ver2:0.05999</setting>
+            <setting name='par2'>ver2:0.9499800205</setting>
+            <setting name='pitchchange'>1.25</setting>
+            <setting name='swellamp1'>2.3</setting>
+            <setting name='swellamp2'>-0.8</setting>
+            <setting name='swellamp3'>2.9</setting>
+            <setting name='vibdelay'>ver2:0.5899900198</setting>
+            <setting name='vibdpth'>ver2:4.9994702339</setting>
+            <setting name='vibspd'>ver2:6.8448300362</setting>
+            <setting name='vibtypeLFO'>0.0</setting>
+            <setting name='volume'>ver2:0.5799900293</setting>
+          </preset>
+          <preset name='watch your step!' uniqueId='2088202112'>
+            <setting name='AM_depth'>ver2:1</setting>
+            <setting name='AM_freq'>ver2:80.8990020752</setting>
+            <setting name='AM_on'>true</setting>
+            <setting name='DIST_on'>false</setting>
+            <setting name='MODE_on'>true</setting>
+            <setting name='OnSwell1'>true</setting>
+            <setting name='OnSwell2'>false</setting>
+            <setting name='OnSwell3'>true</setting>
+            <setting name='SwellPosition1'>0.55</setting>
+            <setting name='SwellPosition2'>0.70000005</setting>
+            <setting name='SwellPosition3'>0.3</setting>
+            <setting name='Vibrato'>true</setting>
+            <setting name='amp1'>1.0</setting>
+            <setting name='amp2'>1.0</setting>
+            <setting name='amp3'>1.0</setting>
+            <setting name='buffer_size'>0.07001</setting>
+            <setting name='cutoff'>ver2:100</setting>
+            <setting name='detune'>0.19100001</setting>
+            <setting name='distortion'>ver2:0.7425500154</setting>
+            <setting name='fil_attack'>ver2:0.001</setting>
+            <setting name='fil_decay'>ver2:6.3646202087</setting>
+            <setting name='flange'>ver2:0</setting>
+            <setting name='inverse1_on'>false</setting>
+            <setting name='inverse2_on'>true</setting>
+            <setting name='inverse3_on'>false</setting>
+            <setting name='jitspd'>ver2:6.8000001907</setting>
+            <setting name='jitterdepth'>ver2:2.6499900818</setting>
+            <setting name='method'>id:1393165289</setting>
+            <setting name='mixmod1'>0.15400001</setting>
+            <setting name='mixmod2'>0.698</setting>
+            <setting name='mixmod3'>0.58000004</setting>
+            <setting name='modQ1'>ver2:130.7140045166</setting>
+            <setting name='modQ2'>ver2:195.6000061035</setting>
+            <setting name='modQ3'>ver2:40.918800354</setting>
+            <setting name='modfreq1'>ver2:59.3736000061</setting>
+            <setting name='modfreq2'>ver2:475.108001709</setting>
+            <setting name='modfreq3'>ver2:1544.2600097656</setting>
+            <setting name='par1'>ver2:0.6100000143</setting>
+            <setting name='par2'>ver2:0.6999800205</setting>
+            <setting name='pitchchange'>1.0</setting>
+            <setting name='swellamp1'>3.3000002</setting>
+            <setting name='swellamp2'>-0.8</setting>
+            <setting name='swellamp3'>2.9</setting>
+            <setting name='vibdelay'>ver2:0.1000000015</setting>
+            <setting name='vibdpth'>ver2:12.7995004654</setting>
+            <setting name='vibspd'>ver2:6.8448300362</setting>
+            <setting name='vibtypeLFO'>2.0</setting>
+            <setting name='volume'>ver2:0.5099800229</setting>
+          </preset>
+          <preset name='where am I ??' uniqueId='1765612198'>
+            <setting name='AM_depth'>ver2:1</setting>
+            <setting name='AM_freq'>ver2:80.8990020752</setting>
+            <setting name='AM_on'>true</setting>
+            <setting name='DIST_on'>false</setting>
+            <setting name='MODE_on'>true</setting>
+            <setting name='OnSwell1'>true</setting>
+            <setting name='OnSwell2'>false</setting>
+            <setting name='OnSwell3'>true</setting>
+            <setting name='SwellPosition1'>0.55</setting>
+            <setting name='SwellPosition2'>0.70000005</setting>
+            <setting name='SwellPosition3'>0.3</setting>
+            <setting name='Vibrato'>true</setting>
+            <setting name='amp1'>1.0</setting>
+            <setting name='amp2'>1.0</setting>
+            <setting name='amp3'>1.0</setting>
+            <setting name='buffer_size'>0.96001</setting>
+            <setting name='cutoff'>ver2:100</setting>
+            <setting name='detune'>0.851</setting>
+            <setting name='distortion'>ver2:0.7623100281</setting>
+            <setting name='fil_attack'>ver2:0.2709099948</setting>
+            <setting name='fil_decay'>ver2:8.2829904556</setting>
+            <setting name='flange'>ver2:0</setting>
+            <setting name='inverse1_on'>false</setting>
+            <setting name='inverse2_on'>false</setting>
+            <setting name='inverse3_on'>true</setting>
+            <setting name='jitspd'>ver2:6.8000001907</setting>
+            <setting name='jitterdepth'>ver2:2.6499900818</setting>
+            <setting name='method'>id:1393165289</setting>
+            <setting name='mixmod1'>0.11800001</setting>
+            <setting name='mixmod2'>0.125</setting>
+            <setting name='mixmod3'>0.125</setting>
+            <setting name='modQ1'>ver2:20.9368000031</setting>
+            <setting name='modQ2'>ver2:15.9600000381</setting>
+            <setting name='modQ3'>ver2:370.2560119629</setting>
+            <setting name='modfreq1'>ver2:395.9710083008</setting>
+            <setting name='modfreq2'>ver2:475.108001709</setting>
+            <setting name='modfreq3'>ver2:217.6580047607</setting>
+            <setting name='par1'>ver2:0.6100000143</setting>
+            <setting name='par2'>ver2:0.6999800205</setting>
+            <setting name='pitchchange'>1.0</setting>
+            <setting name='swellamp1'>3.3000002</setting>
+            <setting name='swellamp2'>-0.8</setting>
+            <setting name='swellamp3'>2.9</setting>
+            <setting name='vibdelay'>ver2:3.5299301147</setting>
+            <setting name='vibdpth'>ver2:8</setting>
+            <setting name='vibspd'>ver2:6.8448300362</setting>
+            <setting name='vibtypeLFO'>0.0</setting>
+            <setting name='volume'>ver2:0.5399900079</setting>
+          </preset>
+        </presetGroup>
+        <opcodeList>
+          <udo>
+            <opcodeName>k_mvpPluck</opcodeName>
+            <outTypes>a</outTypes>
+            <inTypes>kkiiii</inTypes>
+            <codeBody>kamp, kfreq, imethod, ipar1, ipar2, ibufsize xin
+
+setksmps 1
+
+if (imethod==2) then
+	ipar1 = 1
+	ipar2 = 0
+elseif (imethod==4) then
+	ipar2 *= 20
+	ipar2 += 1
+elseif (imethod==5) then
+	isum = ipar1 + ipar2
+	if ((isum)&gt;1) then
+		ipar1 /= (isum*1.0001)
+		ipar2 /= (isum*1.0001)
+	endif
+endif
+
+asig pluck kamp, kfreq, ibufsize, 0, imethod, ipar1, ipar2
+
+xout asig
+</codeBody>
+            <comments>use the pluck opcode with all its different decay settings</comments>
+          </udo>
+          <udo>
+            <opcodeName>k_Vibrato2</opcodeName>
+            <outTypes>k</outTypes>
+            <inTypes>iKKKiKK</inTypes>
+            <codeBody>iOnVibrato, kvibdelay, kdepth, kspeed, itype, kjitdepth, kjitfreq xin
+
+if iOnVibrato == 1 then                                                         ; if switch = ON, add vibrato to sall voices
+        kdp linseg 0, p3 * i(kvibdelay), i(kdepth)                              ; delay time before vibrato
+        kvb  lfo kdp, kspeed, itype                                             ; LFO 0-5
+        kjit randi kjitdepth, kjitfreq                                          ; create some jitter
+        kvibrato = kvb + kjit                                                   ; add jitter and LFO
+else
+        kvibrato = 0                                                            ; if switch = OFF, there is no vibrato
+endif
+
+        xout kvibrato
+</codeBody>
+            <comments>provide a vibrato effect, with random-like values (jitter)</comments>
+          </udo>
+          <udo>
+            <opcodeName>k_Zwel</opcodeName>
+            <outTypes>K</outTypes>
+            <inTypes>iKK</inTypes>
+            <codeBody>iOnSwell,kposition, ksw xin
+ 
+if iOnSwell == 1 then                                                           ; switch Swell on/off
+       irise  = p3 * i(kposition)                                               ; relative position 0 &gt; position &lt; 1 inside note
+       ifall = p3 - irise
+       kswell linseg 0, irise, i(ksw) , ifall, 0 
+else
+        kswell = 0                                                              ; if switch = OFF, no effect
+endif
+
+	xout kswell
+</codeBody>
+            <comments>intended to produce a peak or attenuation in the amplitude within a note</comments>
+          </udo>
+          <udo>
+            <opcodeName>k_ExpCurve</opcodeName>
+            <outTypes>k</outTypes>
+            <inTypes>kk</inTypes>
+            <codeBody>
+kfloat, ksteep	xin
+
+kout	=   (exp(kfloat*ksteep)-1)/(exp(ksteep)-1)
+
+	xout	kout</codeBody>
+            <comments></comments>
+          </udo>
+          <udo>
+            <opcodeName>k_Pfield</opcodeName>
+            <outTypes>i</outTypes>
+            <inTypes>ii</inTypes>
+            <codeBody>ipfield, ivalue  xin
+
+if (p(ipfield) == -1) then
+    ifield    =   ivalue
+else
+    ifield =  p(ipfield)
+endif
+
+   xout    ifield</codeBody>
+            <comments>take in a p-field and the value for it.
+
+if -1 is set for that particular p-field in the score, then Blue will put the Automation Line Point value in its place.
+If not -1, then that p-field value will be used.
+
+example of score:
+i1 0 1 -1 .09           ; -1 for p4, so Automation Line Point replaces frequency setting
+i1 1.2 2 100 -1         ; -1 for p5, so Automation Line Point replaces volume setting</comments>
+          </udo>
+        </opcodeList>
+      </instrument>
+    </instrumentAssignment>
+  </arrangement>
+  <mixer>
+    <enabled>false</enabled>
+    <extraRenderTime>0.0</extraRenderTime>
+    <channelList listName='Orchestra' list='channels'>
+      <channel>
+        <name>1</name>
+        <outChannel>Master</outChannel>
+        <level>0.0</level>
+        <muted>false</muted>
+        <solo>false</solo>
+        <effectsChain bin='pre'/>
+        <effectsChain bin='post'/>
+        <parameter uniqueId='729458697' name='Volume' label='dB' min='-96.0' max='12.0' resolution='-1.0' automationEnabled='false' value='0.0'>
+          <line name='' version='2' max='12.0' min='-96.0' resolution='-1.0' color='-8355712' rightBound='false' endPointsLinked='false'>
+            <linePoint x='0.0' y='0.0'/>
+          </line>
+        </parameter>
+      </channel>
+    </channelList>
+    <channelList listName='SubChannels' list='subChannels'/>
+    <channel>
+      <name>Master</name>
+      <outChannel>Master</outChannel>
+      <level>0.0</level>
+      <muted>false</muted>
+      <solo>false</solo>
+      <effectsChain bin='pre'/>
+      <effectsChain bin='post'/>
+      <parameter uniqueId='-1726706427' name='Volume' label='dB' min='-96.0' max='12.0' resolution='-1.0' automationEnabled='false' value='0.0'>
+        <line name='' version='2' max='12.0' min='-96.0' resolution='-1.0' color='-8355712' rightBound='false' endPointsLinked='false'>
+          <linePoint x='0.0' y='0.0'/>
+        </line>
+      </parameter>
+    </channel>
+  </mixer>
+  <tables></tables>
+  <soundObjectLibrary/>
+  <globalOrcSco>
+    <globalOrc>
+
+
+</globalOrc>
+    <globalSco></globalSco>
+  </globalOrcSco>
+  <opcodeList/>
+  <liveData>
+    <commandLine>csound -Wdo devaudio -L stdin</commandLine>
+    <commandLineEnabled>false</commandLineEnabled>
+    <commandLineOverride>false</commandLineOverride>
+    <liveObjectBins columns='1' rows='8'>
+      <bin>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+        <null/>
+      </bin>
+    </liveObjectBins>
+    <liveObjectSetList/>
+    <repeat>4</repeat>
+    <tempo>60</tempo>
+    <repeatEnabled>false</repeatEnabled>
+  </liveData>
+  <score>
+    <tempo>
+      <enabled>true</enabled>
+      <visible>true</visible>
+      <line name='' version='2' max='240.0' min='30.0' resolution='-1.0' color='-8355712' rightBound='false' endPointsLinked='false'>
+        <linePoint x='0.0' y='62.666664'/>
+      </line>
+    </tempo>
+    <timeState>
+      <pixelSecond>88</pixelSecond>
+      <snapEnabled>true</snapEnabled>
+      <snapValue>0.5</snapValue>
+      <timeDisplay>0</timeDisplay>
+      <timeUnit>5</timeUnit>
+    </timeState>
+    <noteProcessorChain/>
+    <soundObject type='blue.soundObject.PolyObject'>
+      <subjectiveDuration>2.0</subjectiveDuration>
+      <startTime>0.0</startTime>
+      <name>SoundObject Layer Group</name>
+      <backgroundColor>-10066279</backgroundColor>
+      <timeBehavior>2</timeBehavior>
+      <noteProcessorChain/>
+      <defaultHeightIndex>0</defaultHeightIndex>
+      <timeState>
+        <pixelSecond>64</pixelSecond>
+        <snapEnabled>false</snapEnabled>
+        <snapValue>1.0</snapValue>
+        <timeDisplay>0</timeDisplay>
+        <timeUnit>5</timeUnit>
+      </timeState>
+      <soundLayer name='' muted='false' solo='false' heightIndex='6'>
+        <noteProcessorChain/>
+        <soundObject type='blue.soundObject.GenericScore'>
+          <subjectiveDuration>11.5</subjectiveDuration>
+          <startTime>0.5</startTime>
+          <name>Instrument 1</name>
+          <backgroundColor>-12566464</backgroundColor>
+          <timeBehavior>0</timeBehavior>
+          <noteProcessorChain/>
+          <score>i1 0 2 9.00 -1  ; uses Automation Line &lt;volume&gt; and &lt;amplitude_ALP&gt;
+i1 1 1 8.03 1   ; amp=1 from score, but also Automation Line &lt;volume&gt;
+i1 1 2 -1 .5    ; amp=.5 from score, but takes frequency from AL &lt;frequency_ALP&gt;
+</score>
+        </soundObject>
+        <parameterId>-1253707703</parameterId>
+        <parameterId>-1961873859</parameterId>
+        <parameterId>-1961873861</parameterId>
+      </soundLayer>
+    </soundObject>
+  </score>
+  <scratchPadData>
+    <isWordWrapEnabled>true</isWordWrapEnabled>
+    <scratchText/>
+  </scratchPadData>
+  <noteProcessorChainMap/>
+  <renderStartTime>0.0</renderStartTime>
+  <renderEndTime>13.0</renderEndTime>
+  <markersList/>
+  <loopRendering>false</loopRendering>
+  <midiInputProcessor>
+    <keyMapping>PCH</keyMapping>
+    <velMapping>MIDI</velMapping>
+    <pitchConstant/>
+    <ampConstant/>
+    <scale>
+      <scaleName>12TET</scaleName>
+      <baseFrequency>261.62558</baseFrequency>
+      <octave>2.0</octave>
+      <ratios>
+        <ratio>1.0</ratio>
+        <ratio>1.0594631</ratio>
+        <ratio>1.122462</ratio>
+        <ratio>1.1892071</ratio>
+        <ratio>1.2599211</ratio>
+        <ratio>1.3348398</ratio>
+        <ratio>1.4142135</ratio>
+        <ratio>1.4983071</ratio>
+        <ratio>1.587401</ratio>
+        <ratio>1.6817929</ratio>
+        <ratio>1.7817974</ratio>
+        <ratio>1.8877486</ratio>
+      </ratios>
+    </scale>
+  </midiInputProcessor>
+  <pluginData>
+    <blueDataObject bdoType='blue.clojure.project.ClojureProjectData'/>
+  </pluginData>
+</blueData>
