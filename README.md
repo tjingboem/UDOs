@@ -13,4 +13,3 @@ Files
     k_Vibrato2.udo - adds vibrato (frequency modulation of the pitch) to the sound. Option for irregular vibrato.equences per pattern
     k_Tremolo.udo - adds tremolo (amplitude modulation of the amplitude) to the sound.
     k_Arpeggio.udo - adds stepped oscilations to pitch of the sound (Commodore64 SID-like).
-    Pfield.blue - a Blue (https://github.com/kunstmusik/blue) file only. Shows that when using -1 in the score, the Automation Line value is taken and NOT the value from the score. Allows Automation Line Pfield edting.
