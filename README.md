@@ -1,6 +1,6 @@
 # UDOs
 
-Library of Csound UDO code
+Library of Csound UDO code and example Csound csd.
 
 by Menno Knevel
 
