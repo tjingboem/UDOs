@@ -13,3 +13,4 @@ Files
     k_Vibrato2.udo - adds vibrato (frequency modulation of the pitch) to the sound. Option for irregular vibrato.equences per pattern
     k_Tremolo.udo - adds tremolo (amplitude modulation of the amplitude) to the sound.
     k_Arpeggio.udo - adds stepped oscilations to pitch of the sound (Commodore64 SID-like).
+    sampleONCE.udo - ; code from Steven Yi (http://csoundjournal.com/2006winter/encapsulatedInstruments.html), but now implemented as UDO
