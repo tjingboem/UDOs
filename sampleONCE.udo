@@ -1,7 +1,10 @@
 ; code from Steven Yi (http://csoundjournal.com/2006winter/encapsulatedInstruments.html), but now implemented as UDO:
+;
 ;       iFile1 sampleONCE "sample"
-; so: soundfile in and number of fgten out
+;
+; so: soundfile in and number of fgten table out
 ; This routine prohibits loading of samples more than once.
+; 
 
 
 
