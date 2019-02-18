@@ -16,3 +16,4 @@ Files
     k_ArpeggioMini.udo - Arpeggio moves the frequency several times octave-wise, in the rythm of the LFO
     sampleONCE.udo - ; code from Steven Yi (http://csoundjournal.com/2006winter/encapsulatedInstruments.html), but now implemented as UDO
     k_checkaudio - checking the audio output or another a-rate signal by converting it to k-rate
+    k_CrossX.udo - UDO for Blue. divides the incoming signal in 3 frequency portions, to be divided over 3 stereo SubChannels.Needs ButtXX.UDO's
