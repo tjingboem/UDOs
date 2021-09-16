@@ -20,10 +20,14 @@ Library of Csound UDO code (and the examples Csound csds).
     
     Samples:
     sampleONCE.udo - code from Steven Yi (http://csoundjournal.com/2006winter/encapsulatedInstruments.html), but now implemented as UDO  
+    sampleONCE_stereo.udo   -  keeps the same samples from loading and reloading, but re-uses the same samples. For stereo sample and mono samples. 
+    k_SCORE_format_Sampler.udo  -   switch where P4 = frequency or Midi pitch. 
     
     Utilities:
     k_checkaudio -  checking the audio output or another a-rate signal by converting it to k-rate
     k_Countstep -   counter at i rate. Makes particular output channel active
+    k_SCORE_format.udo  -   switch for P4 = frequency or Midi for non-sample based instruments
+    
     
     Blue specials:
     k_Pfield.udo -  especially designed for use in Blue. It lets you decide if you want to set a p-field value in the score or by the use of an Automation Line.
