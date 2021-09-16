@@ -13,6 +13,7 @@ Library of Csound UDO code (and the examples Csound csds).
     k_Zwel.udo  -   looks at the duration of the note and adds/subtracts amplitude to that note. Adds realism to an otherwise static note by adding an amplitude accent.
     
     Pitch:
+    k_lfo3.udo  -   based upon the lfo3 UDO from Steven Yi, slightly adapted. 
     k_lfo4.udo  -   based upon the lfo3 UDO from Steven Yi. An extra jitter option is added, so now contains a total of 7 low frequency	modulation options.
     k_Vibrato2.udo - adds vibrato (frequency modulation of the pitch) to the sound. Option for irregular vibrato.
     k_Arpeggio.udo - adds stepped oscilations to pitch of the sound (Commodore64 SID-like).
