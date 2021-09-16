@@ -10,7 +10,7 @@ Library of Csound UDO code and examples Csound csds.
     
     Amplitude:
     k_Tremolo.udo - simple Tremolo based on lfo opcode. Can be switched ON/OFF.
-    k_Zwel.udo - looks at the duration (p3) of the note and adds/subtracts amplitude in that note while it is playing. Adds realism to an otherwise static note.
+    k_Zwel.udo  -   looks at the duration of the note and adds/subtracts amplitude to that note. Adds realism to an otherwise static note by adding an amplitude accent.
     
     Pitch:
     k_lfo4.udo  -   based upon the lfo3 UDO from Steven Yi. An extra jitter option is added, so now contains a total of 7 low frequency	modulation options.
