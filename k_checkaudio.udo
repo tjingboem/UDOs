@@ -1,9 +1,14 @@
-;simple utility to check incoming audio signal by printing to screen at k-rate
-;kout  k_checkaudio    ain
+/*
+simple utility to check incoming audio signal by printing to screen at k-rate
+*/
 
-ain xin
+	opcode k_checkaudio,k,a
 
-kout    downsamp    ain
-printk2 kout
+ain xin                   ; get audio in
+
+kout    downsamp    ain   ; convert to k-rate signal
+printk2 kout              ; so it can be printed
 
 xout    kout
+
+	endop
