@@ -34,7 +34,7 @@ endif
 instr 1
 
 asig    vco2 .5, 200
-kres    k_Tremolo_k 1, p4, 3, 0
+kres    k_Tremolo 1, p4, 3, 0
 outs    asig * kres, asig * kres
 
 endin
