@@ -2,7 +2,7 @@
 simple Tremolo based on lfo opcode. Can be switched ON/OFF.
 */
 
-  opcode k_Tremolo_k,k,KKKi
+  opcode k_Tremolo,k,KKKi
 
 kOnTremolo, kdepth, kspeed, itype xin           ; switch ON, depth, speed, wave form 
 
