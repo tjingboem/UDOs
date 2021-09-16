@@ -1,6 +1,6 @@
 # UDOs
 
-Library of Csound UDO code and examples Csound csds.
+Library of Csound UDO code (and the examples Csound csds).
 
 
     Filters:
