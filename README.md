@@ -15,3 +15,4 @@ Files
     sampleONCE.udo - ; code from Steven Yi (http://csoundjournal.com/2006winter/encapsulatedInstruments.html), but now implemented as UDO
     k_checkaudio - checking the audio output or another a-rate signal by converting it to k-rate
     k_CrossX.udo - UDO for Blue. divides the incoming signal in 3 frequency portions, to be divided over 3 stereo SubChannels.Needs ButtXX.UDO's
+    k_lfo4.udo  -   based upon the lfo3 UDO from Steven Yi. An extra jitter option is added, so now contains a total of 7 low frequency	modulation options
