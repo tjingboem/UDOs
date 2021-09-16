@@ -6,6 +6,7 @@ by Menno Knevel
 
 Files
 
+    ButtHP.udo  -   UDO from Victor Lazzarini. A recursive highpass filter. The number of recursions allows for a deeper filter
     ButtBP.udo  -   UDO from Victor Lazzarini. A recursive bandpass filter. The number of recursions allows for a deeper filter
     k_Pfield.udo -  especially designed for use in Blue. It lets you decide if you want to set a p-field value in the score or by the use of an Automation Line.
     k_Zwel.udo - looks at the duration (p3) of the note and adds/subtracts amplitude in that note while it is playing. Adds realism to an otherwise static note.
