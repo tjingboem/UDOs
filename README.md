@@ -9,7 +9,7 @@ Library of Csound UDO code and examples Csound csds.
     ButtBP.udo  -   UDO from Victor Lazzarini. A recursive bandpass filter. The number of recursions allows for a deeper filter..
     
     Amplitude:
-    k_Tremolo.udo - adds tremolo (amplitude modulation of the amplitude) to the sound.
+    k_Tremolo.udo - simple Tremolo based on lfo opcode. Can be switched ON/OFF.
     k_Zwel.udo - looks at the duration (p3) of the note and adds/subtracts amplitude in that note while it is playing. Adds realism to an otherwise static note.
     
     Pitch:
