@@ -1,3 +1,7 @@
+/* UDO from Victor Lazzarini. A recursive highpass filter
+The number of recursions allows for a deeper filter
+*/
+
 	opcode ButtHP,a,akio
 
 asig, kf, iN, icnt xin			; source, filter frequency, # of recursions, (loop counter)
