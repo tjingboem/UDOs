@@ -23,6 +23,7 @@ Library of Csound UDO code (and the examples Csound csds).
     
     Utilities:
     k_checkaudio -  checking the audio output or another a-rate signal by converting it to k-rate
+    k_Countstep -   counter at i rate. Makes particular output channel active
     
     Blue specials:
     k_Pfield.udo -  especially designed for use in Blue. It lets you decide if you want to set a p-field value in the score or by the use of an Automation Line.
