@@ -12,8 +12,6 @@ sr = 44100
 ksmps = 32 
 0dbfs  = 1 
 nchnls = 2
-;# k_Arpeggio - adds stepped oscilations to pitch of the sound.
-
 
 	opcode k_Arpeggio,k,KKKiKK
 
