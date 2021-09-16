@@ -1,6 +1,6 @@
 /*
 counter at i rate
-8/
+*/
 
 
 	opcode k_CountStep,iiiiiiii,i
