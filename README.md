@@ -14,7 +14,7 @@ Library of Csound UDO code and examples Csound csds.
     
     Pitch:
     k_lfo4.udo  -   based upon the lfo3 UDO from Steven Yi. An extra jitter option is added, so now contains a total of 7 low frequency	modulation options.
-    k_Vibrato2.udo - adds vibrato (frequency modulation of the pitch) to the sound. Option for irregular vibrato sequences per pattern.
+    k_Vibrato2.udo - adds vibrato (frequency modulation of the pitch) to the sound. Option for irregular vibrato.
     k_Arpeggio.udo - adds stepped oscilations to pitch of the sound (Commodore64 SID-like).
     k_ArpeggioMini.udo - Arpeggio moves the frequency several times octave-wise, in the rythm of the LFO
     
