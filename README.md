@@ -33,6 +33,23 @@ Library of Csound UDO code (and the examples Csound csds).
     Blue specials:
     k_Pfield.udo -  especially designed for use in Blue. It lets you decide if you want to set a p-field value in the score or by the use of an Automation Line.
     k_CrossX.udo -  UDO for Blue. divides the incoming signal in 3 frequency portions, to be divided over 3 stereo SubChannels.Needs ButtXX.UDO's (see above).
+    
+    
+    Bunch of UDOs i collected from somewhere and when i find out where in the future, i will surely give credit....:
+    TapeEcho3
+    TapeEcho4
+    TapeEcho
+    SCReverb
+    activedamp
+    TapeRead
+    Vocoder
+    diode_ladder
+    StreamAnal
+    OscBnk
+    Tab_rand
+    tab_reverse
+    more to come...
+    
 
    
 
