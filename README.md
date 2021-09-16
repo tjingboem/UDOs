@@ -1,10 +1,8 @@
 # UDOs
 
-Library of Csound UDO code and example Csound csd.
+Library of Csound UDO code and example Csound csd. by Menno Knevel
 
-by Menno Knevel
 
-Files:
     ButtLP.udo  -   UDO from Victor Lazzarini. A recursive lowpass filter. The number of recursions allows for a deeper filter
     ButtHP.udo  -   UDO from Victor Lazzarini. A recursive highpass filter. The number of recursions allows for a deeper filter
     ButtBP.udo  -   UDO from Victor Lazzarini. A recursive bandpass filter. The number of recursions allows for a deeper filter
