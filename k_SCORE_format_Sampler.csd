@@ -28,7 +28,7 @@ instr 1
 
 ipitch, iamp k_SCORE_format_Sampler  p4, p5, 1
 if p4 == 0 then
-    prints  "\n48 is seen as frequency --> %fHz\n", ipitch
+    prints  "\n261.625565 is seen as frequency --> %fx original pitch\n", ipitch
     prints  "amplitude stays untouched --> %f\n\n", iamp
     else
     prints  "\n48 is seen as midi note --> %f x original pitch\n", ipitch
