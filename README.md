@@ -20,7 +20,7 @@ Library of Csound UDO code (and the examples Csound csds).
     k_ArpeggioMini.udo - Arpeggio moves the frequency several times octave-wise, in the rythm of the LFO
     
     Samples:
-    sampleONCE.udo - code from Steven Yi (http://csoundjournal.com/2006winter/encapsulatedInstruments.html), but now implemented as UDO  
+    sampleONCE.udo - keeps the same samples from loading and reloading, but re-uses the same samples. For mono samples.
     sampleONCE_stereo.udo   -  keeps the same samples from loading and reloading, but re-uses the same samples. For stereo sample and mono samples. 
     k_SCORE_format_Sampler.udo  -   switch where P4 = frequency or Midi pitch. 
     k_SCORE_format.udo  -   switch for P4 = frequency or Midi for non-sample based instruments
