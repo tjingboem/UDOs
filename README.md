@@ -40,10 +40,8 @@ Library of Csound UDO code (and the examples Csound csds).
     TapeEcho3
     TapeEcho4
     TapeEcho
-    SCReverb
     activedamp
     TapeRead
-    Vocoder
     diode_ladder
     StreamAnal
     OscBnk
