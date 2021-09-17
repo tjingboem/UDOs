@@ -9,7 +9,7 @@
 iscore, ipitch, iamp  xin
 
 if (iscore == 0) then                                                           ; frequency mode
-    ipitch  *=  .0038222
+    ipitch  *=  .003822258
 else
     ipitch = semitone(ipitch - 48)
 
