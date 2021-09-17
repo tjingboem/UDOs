@@ -22,7 +22,7 @@ Library of Csound UDO code (and the examples Csound csds).
     Samples:
     sampleONCE.udo - keeps the same samples from loading and reloading, but re-uses the same samples. For mono samples.
     sampleONCE_stereo.udo   -  keeps the same samples from loading and reloading, but re-uses the same samples. For stereo sample and mono samples. 
-    k_SCORE_format_Sampler.udo  -   switch where P4 = frequency or Midi pitch. 
+    k_SCORE_format_Sampler.udo  -   switch where P4 = frequency or Midi pitch. For sample based instruments. 
     k_SCORE_format.udo  -   switch for P4 = frequency or Midi for non-sample based instruments
     
     Utilities:
