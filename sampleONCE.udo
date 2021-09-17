@@ -1,4 +1,6 @@
 /*
+keeps the same samples from loading and reloading, but re-uses the same sample tables.
+
 code from Steven Yi (http://csoundjournal.com/2006winter/encapsulatedInstruments.html), adapted for use with samples. Here implemented as UDO.
 What does it do:
 1. Check to see if the table we are depending on is defined. 
