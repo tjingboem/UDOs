@@ -1,6 +1,17 @@
-; keeps the same samples from loading and reloading, but re-uses the same samples
-; intended for stereo sample use and mono use
+/*
+keeps the same samples from loading and reloading, but re-uses the same sample tables. Intended for stereo sample use and mono use
 
+code from Steven Yi (http://csoundjournal.com/2006winter/encapsulatedInstruments.html), adapted for use with samples. Here implemented as UDO.
+What does it do:
+1. Check to see if the table we are depending on is defined. 
+2. If it is already defined, use pre-existing table.
+3. If it is not defined, create the table and use.
+
+       iFile1 sampleONCE "sample"
+
+ so: soundfile in and number of fgten table out
+ This routine prohibits loading of samples more than once.
+*/
 
 	opcode sampleONCE_stereo,iii,S
 
