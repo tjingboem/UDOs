@@ -32,6 +32,10 @@ Library of Csound UDO code (and the examples Csound csds).
     Utilities:
     k_checkaudio -  checking the audio output or another a-rate signal by converting it to k-rate
     k_Countstep -   counter at i rate. Makes particular output channel active
+    k_suffixLORIS - checks if input file is a LORIS file or not
+    k_suffixATS -  checks if input file is a ATS file or not
+    k_suffixSOUND - checks if input file is a sound file or not
+    k_suffixSF2 - checks if input file is a SoundFont file or not
     
     
     
