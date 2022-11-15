@@ -1,0 +1,36 @@
+<udo>
+  <opcodeName>k_suffixLORIS</opcodeName>
+  <outTypes>Si</outTypes>
+  <inTypes>So</inTypes>
+  <codeBody>
+Spath, ilow xin
+ipos      strrindex Spath, &quot;.&quot;
+Suf       strsub    Spath, ipos+1
+ if ilow != 0 then
+Suf       strlower  Suf 
+ endif
+iok    strcmp     &quot;mtx&quot;, Suf                                                   ; specify wanted file extensions
+          xout      Suf, iok
+</codeBody>
+  <comments>checks to see if input file is indeed a real LORIS file
+
+code in instrument:
+;------------------------------check file---------------------------------------
+Suf, iok     k_suffixLORIS     &quot;&lt;LORISfile&gt;&quot;, 1
+if (iok == 0) then
+    else
+          prints    &quot;\ninstrument %d needs a LORIS file!\n\n&quot;, &lt;INSTR_ID&gt;        ; not the suffix from the list
+          goto nosound                                                          ; jump to label
+endif
+
+/****************************************************************************
+Suf StrSuf Spath [,ilow]
+Returns the suffix of a filename or path, optional in lower case 
+
+Returns the suffix (extension) of a filename or a full path, optional in lower case.
+written by joachim heintz
+
+Spath - full pathname (or filename) as string
+ilow - return ensuring lower case (1) or return as in Spath (0 = default)
+****************************************************************************/</comments>
+</udo>
