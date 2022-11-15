@@ -1,0 +1,30 @@
+<udo>
+  <opcodeName>declick</opcodeName>
+  <outTypes>a</outTypes>
+  <inTypes>a</inTypes>
+  <codeBody>
+ain     xin
+aenv    linseg 0, 0.01, 1, p3 - 0.03, 1, 0.02, 0, 0.01, 0
+        xout ain * aenv         ; apply envelope and write output
+
+</codeBody>
+  <comments>declick - removes clicks from signal start and end
+
+DESCRIPTION
+Given a signal, it will DeClick will apply an envelope to it to ensure there is no clicking at the start or end of the sound
+
+(Taken from the Csound Reference Manual)
+
+SYNTAX
+aout    declick    ain
+
+INITIALIZATION
+null
+
+PERFORMANCE
+ain - signal to declick
+aout - declicked signal
+
+CREDITS
+Author: Istvan Varga</comments>
+</udo>
