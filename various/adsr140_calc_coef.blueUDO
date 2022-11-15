@@ -1,0 +1,12 @@
+<udo>
+  <opcodeName>adsr140_calc_coef</opcodeName>
+  <outTypes>k</outTypes>
+  <inTypes>kk</inTypes>
+  <codeBody>  
+  knum_samps, kratio xin
+  xout exp( -log((1.0 + kratio) / kratio) / knum_samps)
+    
+</codeBody>
+  <comments>To be placed before to be blueUDO adsr140.blueUDO.
+</comments>
+</udo>
