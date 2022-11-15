@@ -47,5 +47,10 @@ elseif (ktype == 6) then                                                        
 endif
 
 xout kout</codeBody>
-  <comments></comments>
+  <comments>uses cosine, triangle, squares, saws and random to produce Low Frequency modulating signals
+
+---
+
+version 1, November 2022
+- initial version</comments>
 </udo>
