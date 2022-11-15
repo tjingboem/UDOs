@@ -1,0 +1,73 @@
+<udo>
+  <opcodeName>k_suffixSOUND</opcodeName>
+  <outTypes>Si</outTypes>
+  <inTypes>So</inTypes>
+  <codeBody>
+Spath, ilow xin
+ipos      strrindex Spath, &quot;.&quot;
+Suf       strsub    Spath, ipos+1
+ if ilow != 0 then
+Suf       strlower  Suf 
+ endif
+
+iok1    strcmp     &quot;wav&quot;, Suf                                                   ; specify wanted file extensions
+iok2    strcmp     &quot;aiff&quot;, Suf
+iok3    strcmp     &quot;au&quot;, Suf
+iok4    strcmp     &quot;raw&quot;, Suf
+iok5    strcmp     &quot;aif&quot;, Suf
+iok6    strcmp     &quot;paf&quot;, Suf
+iok7    strcmp     &quot;svx&quot;, Suf
+iok8    strcmp     &quot;nist&quot;, Suf
+iok9    strcmp     &quot;voc&quot;, Suf
+iok10    strcmp     &quot;ircam&quot;, Suf
+iok11    strcmp     &quot;w64&quot;, Suf
+iok12    strcmp     &quot;mat4&quot;, Suf
+iok13    strcmp     &quot;mat5&quot;, Suf
+iok14    strcmp     &quot;pvf&quot;, Suf
+iok15    strcmp     &quot;xi&quot;, Suf
+iok16    strcmp     &quot;htk&quot;, Suf
+iok17    strcmp     &quot;sds&quot;, Suf
+iok18    strcmp     &quot;avr&quot;, Suf
+iok19    strcmp     &quot;wavex&quot;, Suf
+iok20    strcmp     &quot;sd2&quot;, Suf
+iok21    strcmp     &quot;flac&quot;, Suf
+iok22    strcmp     &quot;caf&quot;, Suf
+iok23    strcmp     &quot;wve&quot;, Suf
+iok24    strcmp     &quot;ogg&quot;, Suf
+iok25    strcmp     &quot;mp3&quot;, Suf
+iok26    strcmp     &quot;mpc2k&quot;, Suf
+iok27    strcmp     &quot;rf64&quot;, Suf
+
+if (iok1 == 0) || (iok2 == 0) || (iok3 == 0) ||(iok4 == 0) || (iok5 == 0) ||(iok6 == 0) \
+   || (iok7 == 0) || (iok8 == 0) ||(iok9 == 0) || (iok10 == 0) ||(iok11 == 0) \
+   || (iok12 == 0) || (iok13 == 0) ||(iok14 == 0) || (iok15 == 0) ||(iok16 == 0) \
+   || (iok17 == 0) || (iok18 == 0) ||(iok19 == 0) || (iok20 == 0) ||(iok21 == 0) \
+   || (iok22 == 0) || (iok23 == 0) ||(iok24 == 0) || (iok25 == 0) ||(iok26 == 0) \
+   || (iok27 == 0) then
+    iok = 0                                                                     ; check OK
+else
+    iok = 1                                                                     ; not OK
+endif
+          xout      Suf, iok
+</codeBody>
+  <comments>checks whether input file is a real sound file. 
+This is a possible text in the code of the instrument itself
+Suf, iok     k_suffixSOUND     &lt;soundfile&gt;, 1
+if (iok == 0)  then
+else
+          prints    &quot;\ninstrument %d needs an audiofile!\n\n&quot;, &lt;INSTR_ID&gt;       ; not the suffix from the list
+          goto nosound                                                          ; jump to label
+endif
+
+
+/****************************************************************************
+Suf StrSuf Spath [,ilow]
+Returns the suffix of a filename or path, optional in lower case 
+
+Returns the suffix (extension) of a filename or a full path, optional in lower case.
+written by joachim heintz
+
+Spath - full pathname (or filename) as string
+ilow - return ensuring lower case (1) or return as in Spath (0 = default)
+****************************************************************************/</comments>
+</udo>
