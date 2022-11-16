@@ -1,0 +1,16 @@
+<udo>
+  <opcodeName>k_SCORE_format_Sampler</opcodeName>
+  <outTypes>ii</outTypes>
+  <inTypes>iii</inTypes>
+  <codeBody>iscore, ipitch, iamp  xin
+
+if (iscore == 0) then                                                           ; frequency mode
+    ipitch  *=  .0038222
+else
+    ipitch = semitone(ipitch - 48)
+
+endif
+
+xout ipitch, iamp</codeBody>
+  <comments>switch between frequency and Midi note values. Concerns samples only.</comments>
+</udo>
