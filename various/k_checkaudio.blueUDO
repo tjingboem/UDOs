@@ -1,0 +1,13 @@
+<udo>
+  <opcodeName>k_checkaudio</opcodeName>
+  <outTypes>k</outTypes>
+  <inTypes>a</inTypes>
+  <codeBody>ain xin                                                                         ; audio? in
+
+kout    downsamp    ain
+printk2 kout                                                                    ; print at k rate
+
+xout    kout
+</codeBody>
+  <comments>makes a rough estimation by checking at k rate the value of an a rate signal</comments>
+</udo>
