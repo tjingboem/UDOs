@@ -1,0 +1,22 @@
+<udo>
+  <opcodeName>k_Pfield</opcodeName>
+  <outTypes>k</outTypes>
+  <inTypes>ik</inTypes>
+  <codeBody>ipfield, kvalue  xin                                                            ; choose pfield &amp; value
+
+if (p(ipfield) == -1) then                                                      ; -1 is the switch number
+    kfield    =   kvalue                                                        ; if -1 then follow the values of the Automation Line
+else                            
+    kfield =  p(ipfield)                                                        ; if any other value than -1, take the value from the pfiled in the score
+endif
+
+   xout    kfield</codeBody>
+  <comments>take in a p-field and the value for it.
+
+if -1 is set for that particular p-field in the score, then Blue will put the Automation Line Point value in its place.
+If not -1, then that p-field value will be used.
+
+example of score:
+i1 0 1 -1 .09           ; -1 for p4, so Automation Line Point replaces frequency setting
+i1 1.2 2 100 -1         ; -1 for p5, so Automation Line Point replaces volume setting</comments>
+</udo>
