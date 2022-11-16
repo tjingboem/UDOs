@@ -1,0 +1,13 @@
+<udo>
+  <opcodeName>k_SCORE_format</opcodeName>
+  <outTypes>ii</outTypes>
+  <inTypes>iii</inTypes>
+  <codeBody>iscore, ifreq, iamp  xin
+
+if (iscore &gt; 0) then
+    ifreq   mtof    p4
+endif
+
+xout ifreq, iamp</codeBody>
+  <comments>if iscore &gt; 0, then convert a midi to frequency</comments>
+</udo>
