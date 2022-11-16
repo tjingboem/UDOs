@@ -1,0 +1,23 @@
+<udo>
+  <opcodeName>k_Zwel</opcodeName>
+  <outTypes>k</outTypes>
+  <inTypes>iii</inTypes>
+  <codeBody>iOnSwell,iposition, isw xin
+
+if iOnSwell == 1 then                                                        ;switch Swell on/off
+        irise  = p3 * iposition                                                       ;iposition = 0&lt;p9&lt;1
+        ifall = p3 - irise
+        kswell linseg 0, irise, isw , ifall, 0                                  ; isw = amount of swell
+endif
+	xout kswell
+</codeBody>
+  <comments>use to put a amplitude accent inside the note
+
+- switch to activate
+- where to position the amp accent
+- amount of amplitude for accent
+
+to be used with amplitude envelope generator like this: envelope + k_Zwell
+Because of depenedency on the note duration (p3), do not use with envelope type of the r type or madsr. This is due to the fact that when p3 stops, k_Zwell stops but the release sets in, producing a click. 
+In this case, use k_Zwell*</comments>
+</udo>
