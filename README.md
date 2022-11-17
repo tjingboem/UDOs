@@ -1,4 +1,4 @@
-# UDOs
+# UDOs for Csound & blueUDOs for Blue (https://blue.kunstmusik.com/).
 
 Library of Csound UDO code (and the examples Csound csds).
 
