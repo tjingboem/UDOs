@@ -6,8 +6,8 @@ Library of Csound UDO code (https://csound.com/) & blueUDOs for Blue (https://bl
     amplitude:
     k_Tremolo - simple Tremolo based on lfo opcode. Can be switched ON/OFF.
     k_Tremolo.csd - simple example
-    k_Tremolo_adsr140_MONO
-    k_Tremolo_adsr140_STEREO
+    k_Tremolo_adsr140_MONO - tremolo based on adsr140.udo
+    k_Tremolo_adsr140_STEREO - tremolo based on adsr140.udo
     k_Zwel  -   looks at the duration of the note and adds/subtracts amplitude to that note. Adds realism to an otherwise static note by adding an amplitude accent.
     k_Zwel_m  -   looks at the duration of the note and adds/subtracts amplitude to that note. Adds realism to an otherwise static note by adding an amplitude accent
     k_Zwel.csd - simple example
