@@ -58,7 +58,7 @@ Library of Csound UDO code (https://csound.com/) & blueUDOs for Blue (https://bl
     k_Countstep -   counter at i rate. Makes particular output channel active
     k_Countstep.csd - simple example
     k_SCORE_format_Sampler  -   switch where P4 = frequency or Midi pitch. For sample based instruments. 
-    k_SCORE_format_Sampler.csd
+    k_SCORE_format_Sampler.csd - simple example
     k_SCORE_format  -   switch for P4 = frequency or Midi for non-sample based instruments
     k_SCORE_format.csd - simple example
 
