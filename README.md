@@ -1,6 +1,6 @@
 # UDOs & blueUDOs
 
-Library of Csound UDO code & blueUDOs for Blue (https://blue.kunstmusik.com/).
+Library of Csound UDO code & blueUDOs for Blue (https://csound.com/ & https://blue.kunstmusik.com/).
 
 
     Filters:
