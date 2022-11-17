@@ -1,0 +1,12 @@
+<udo>
+  <opcodeName>ButtBP</opcodeName>
+  <outTypes>a</outTypes>
+  <inTypes>akkio</inTypes>
+  <codeBody>asig,kf,kbw,iN,icnt xin                                                         ; audio in, frequency, bandwidth, number of filters, counter
+if icnt &gt;= iN-1 goto cont
+asig ButtBP asig,kf,kbw,iN,icnt+1
+cont:
+xout butterbp(asig,kf,kbw)
+</codeBody>
+  <comments>UDO from Victor Lazzarini. A recursive bandpass filter. The number of recursions allows for a deeper filter.</comments>
+</udo>

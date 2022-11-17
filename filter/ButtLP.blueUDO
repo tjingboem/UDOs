@@ -1,0 +1,12 @@
+<udo>
+  <opcodeName>ButtLP</opcodeName>
+  <outTypes>a</outTypes>
+  <inTypes>akio</inTypes>
+  <codeBody>asig,kf,iN,icnt xin                                                             ; audio in, frequency, number of filters, counter
+if icnt &gt;= iN goto cont
+asig ButtLP asig,kf,iN,icnt+1
+cont:
+xout butterlp(asig,kf)</codeBody>
+  <comments>UDO from Victor Lazzarini. A recursive lowpass filter. The number of recursions allows for a deeper filter.
+</comments>
+</udo>
