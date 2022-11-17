@@ -6,13 +6,14 @@ Library of Csound UDO code & blueUDOs for Blue (https://csound.com/ & https://bl
 BlueUDOs are oraganized in the folders:
     
     amplitude:
-    adsr140.udo
-    adsr140_calc_coef.udo
-    k_Tremolo.udo - simple Tremolo based on lfo opcode. Can be switched ON/OFF.
+    k_Tremolo.blueUDO - simple Tremolo based on lfo opcode. Can be switched ON/OFF.
+    k_Tremolo.csd
     k_Tremolo_adsr140_MONO.udo
     k_Tremolo_adsr140_STEREO.udo
     k_Zwel.udo  -   looks at the duration of the note and adds/subtracts amplitude to that note. Adds realism to an otherwise static note by adding an amplitude accent.
-    
+    k_Zwel_m.udo  -   looks at the duration of the note and adds/subtracts amplitude to that note. Adds realism to an otherwise static note by adding an amplitude accent
+    k_Zwel.csd
+        
     file:
     ButtLP.udo  -   UDO from Victor Lazzarini. A recursive lowpass filter. The number of recursions allows for a deeper filter.
     ButtHP.udo  -   UDO from Victor Lazzarini. A recursive highpass filter. The number of recursions allows for a deeper filter.
