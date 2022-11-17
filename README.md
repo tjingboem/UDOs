@@ -3,8 +3,6 @@
 Library of Csound UDO code & blueUDOs for Blue (https://csound.com/ & https://blue.kunstmusik.com/).
 
     
-BlueUDOs are oraganized in the folders:
-    
     amplitude:
     k_Tremolo - simple Tremolo based on lfo opcode. Can be switched ON/OFF.
     k_Tremolo.csd
